@@ -1,3 +1,28 @@
-:root { --primary: #2563eb; }
-body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; color: #0f172a; }
-.value { color: var(--primary); font-weight: 600; }
+:root { --primary: #2563eb; --secondary: #0f172a; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 0; color: #0f172a; background: #f8fafc; }
+.page { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+.hero { display: grid; gap: 2rem; align-items: center; grid-template-columns: 1.6fr 0.8fr; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; color: #64748b; margin: 0 0 0.5rem; }
+h1 { font-size: clamp(2rem, 3.2vw, 3rem); margin: 0 0 0.75rem; }
+.value { color: var(--primary); font-weight: 600; font-size: 1.1rem; margin: 0 0 1.5rem; }
+.logo { max-width: 160px; justify-self: end; border-radius: 16px; background: white; padding: 0.75rem; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+.cta { display: inline-flex; align-items: center; justify-content: center; padding: 0.7rem 1.2rem; border-radius: 999px; background: var(--primary); color: white; font-weight: 600; text-decoration: none; }
+.cta.outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+.panel { margin-top: 1.75rem; padding: 1.5rem; border-radius: 16px; background: white; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+.panel h2, .panel h3 { margin-top: 0; }
+.muted { color: #64748b; margin: 0.25rem 0; }
+.list { padding-left: 1.2rem; margin: 0.5rem 0 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tags span { background: #e2e8f0; color: #0f172a; padding: 0.35rem 0.6rem; border-radius: 999px; font-size: 0.85rem; }
+.faq { display: grid; gap: 1rem; }
+.faq-item h4 { margin: 0 0 0.35rem; }
+.testimonials { display: grid; gap: 1rem; }
+blockquote { margin: 0; padding: 1rem; border-left: 3px solid var(--primary); background: #f8fafc; border-radius: 12px; }
+blockquote p { margin: 0 0 0.5rem; }
+blockquote cite { font-style: normal; color: #475569; font-size: 0.9rem; }
+.contact { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; }
+  .logo { justify-self: start; }
+}
